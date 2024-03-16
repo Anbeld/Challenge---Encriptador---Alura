@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Incia el documento en el idioma español -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador - Alura</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> <!-- Crea ell Header de la página -->
+        <div class="container"> <!-- Contenedor para el contenido del Header -->
+            <h1 class="logo"><img src="imgs/Logo-Alura.png" alt="Logo Alura"></h1>
+            <h1>Encriptador de texto</h1>
+        </div>
+    </header>
+
+    <div class="contenedorPrincipal"> <!-- Crea el contendor para el resto de contenido de la página -->
+        <div class="textarea">
+            <textarea name="Entrada" id="textoIngresado" onkeypress="verificarTexto(event)" placeholder="Ingresa aquí tu texto &#10;&#10;&#10;&#10;&#10;Solo letras minúsculas y sin acentos" autofocus onfocus="focusTextoIngresado()"></textarea>
+        </div>
+        <div class="divisionBotones">
+            <button class="botones" id="encriptar" onclick="encriptar()">Encriptar</button>
+            <button class="botones" id="copiar" onclick="copiar()" disabled>Copiar</button>
+            <div id="mensaje-copiado" class="mensaje">¡¡Texto copiado!!</div>
+            <button class="botones" id="desencriptar" onclick="desencriptar()">Desencriptar</button>
+        </div>
+        <div class="textarea">
+            <textarea name="Entrada" id="textoAMostrar" onkeypress="verificarTexto(event)" disabled></textarea>
+        </div>
+    </div>
+
+    <script src="app.js"></script> <!-- Enlaza el archivo HTML a un archivo JavaScript donde se encuentran las funciones llamadas -->
+</body>
+</html>

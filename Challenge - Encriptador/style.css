@@ -1,0 +1,159 @@
+body {
+    background-color: rgba(71, 204, 224, 0.475); /* Asigna el color de fondo para todo el body de la página web */
+    overflow-y: auto; /* Siempre que se supere el límite en dirección vertical mostrará un scroll para permitir el movimiento */
+    overflow-x: hidden; /* Oculta el scroll horizontal, de manera que lo mostrará */
+    width: 100vw; /* Asigna el width al view_width máximo */ 
+    height: 100vh; /* Asigna el height al view_height máximo */
+    font-family: "Nunito", sans-serif; /* Asigna un fuenta de letra diferente a la predeterminada */
+    font-style: normal;
+}
+
+header {
+    background-size: contain; /* Asigna el tamaño del fondo del header todo el contenedor disponible */
+    width: 100vw; /* Asigna el width al view_width máximo */
+    background-color: #ffffffa8;
+    padding: 20px 0; /* Asigna un espacio interno de 20px a la parte superior e inferior */
+    font-style: normal;
+    color: rgb(16, 72, 100); /* Asigna el color a la fuente del elemento */ 
+    font-size: 50px; /* Establece el tamaño de la fuente a 50 pixeles */
+}
+
+.container {
+    display: flex; /* Permite una distribución y manejo de elementos más dinamica*/
+    width: 100vw; /* Asigna el width al view_width máximo */
+}
+
+.logo {
+    float: left; /* Flotar la imagen a la izquierda */
+    margin-right: 30px; /* Crea un margen externo a la derecha entre el elemento que crea el margen y el que está a su derecha */
+    margin-left: 30px; /* Crea un margen externo a la izquierda entre el elemento que crea el margen y el que está a su izquierda */
+}
+
+header h1 {
+    float: left; /* Ubica el elemento a la izquierda */
+}
+
+.contenedorPrincipal {
+    display: grid; /* Convierte el contenedor en una cuadrícula */
+    grid-template-columns: 2fr 1fr 2fr; /* Divide el espacio en tres partes iguales */
+    grid-gap: 10px; /* Espacio entre las secciones */
+    margin-top: 2.5%; /* Crea un margen externo en la parte superior del elemento que crea el margen y el que está arriba */
+    margin-bottom: 2%; /* Crea un margen externo en la parte inferior del elemento que crea el margen y el que está debajo */
+    margin-left: 2.5%; /* Crea un margen externo a la izquierda entre el elemento que crea el margen y el que está a su izquierda */
+    margin-right: 2%; /* Crea un margen externo a la derecha entre el elemento que crea el margen y el que está a su derecha */
+}
+
+.contenedorPrincipal textarea{
+    max-width: 335; /* Establece el máximo width que puede tener el elemento */
+    max-height: 550; /* Asigna al máximo height el height al view_height */
+    width: 85%; /* Establece el width del elemento al 85% */
+    height: 350px;
+    resize: none;
+    border-radius: 10px; /* Crea un borde de 10 pixeles al elemento */
+    padding: 1.5%; /* Asigna un espacio interno en todas las direcciones de 1.5% el tamaño de la página */
+    background-color: rgba(255, 255, 255, 0.8); /* Define el color de fondo con opacidad */ 
+    font-size: 22px; /* Establece el tamaño de la fuente a 22 pixeles */
+    margin-top: 60px; /* Crea un margen externo en la parte superior del elemento que crea el margen y el que está arriba */
+    margin-left: 5%; /* Crea un margen externo a la izquierda entre el elemento que crea el margen y el que está a su izquierda */
+    margin-right: 5%; /* Crea un margen externo a la derecha entre el elemento que crea el margen y el que está a su derecha */
+    margin-bottom: 60px; /* Crea un margen externo en la parte inferior del elemento que crea el margen y el que está debajo */
+    font-family: "Nunito", sans-serif;
+}
+
+.divisionBotones {  
+    display: flex; /* Permite una distribución y manejo de elementos más dinamica*/
+    flex-direction: column;
+    justify-content: space-evenly; /* Espacio entre los elementos */
+    align-items: center; 
+}
+
+.divisionBotones button{
+    width: 53%; /* Establece el width del elemento al 53% */
+}
+
+.botones {
+    padding: 15px 0; /* Asigna un espacio interno de 15px a la parte superior e inferior */
+    font-size: 18px; /* Establece el tamaño de la fuente a 18 pixeles */
+    font-weight: bold; /* Establece en negrilla la fuente */
+    color:white; /* Asigna el color a la fuente del elemento */ 
+    background: orange; /* Establece el fondo del elemento */
+    border:none; /* Elimina todos los bordes del elemento */
+    border-radius: 10px; /* Crea un borde de 10 pixeles al elemento */
+    transition: 1s all; /* Genera la transición */
+    cursor:pointer; /* Cambia el cursor a una mano cuando está sobre el elemento */
+    font-family: "Nunito", sans-serif; /* Asigna un fuenta de letra diferente a la predeterminada */
+}
+
+.botones:hover{
+    background: darkorange; /* Establece el fondo del elemento */
+    transform: scale(1.2); /* Aumenta 120% el tamaño del elemento */
+}
+
+.botones[disabled]{
+    display: none; /* Los botones deshabilitados no son mostrados en la página hasta que sean activados */
+}
+
+.mensaje{
+    justify-content: center; /* Centra los elementos horizontalmente dentro del contenedor */
+    text-align: center; /* Centra el texto horizontalmente dentro del elemento */
+    display: none; /* Oculta el elemento y su contenido */
+    font-size: 25px; /* Establece el tamaño de la fuente a 25 pixeles */
+    color: rgb(16, 72, 100); /* Asigna el color a la fuente del elemento */ 
+    font-weight: bold;
+}
+
+/* Adaptar contenido a un tamaño ancho máximo de 1150px  */
+@media screen and (max-width:1151px){
+    .contenedorPrincipal {
+        display: grid; /* Convierte el contenedor en una cuadrícula */
+        grid-template-columns: 2.7fr 1fr 2.7fr; /* Divide el espacio en tres partes iguales */
+        grid-gap: 10px; /* Espacio entre las secciones */
+        margin-top: 4%;  /* Crea un margen externo en la parte superior del elemento que crea el margen y el que está arriba */
+        margin-left: 1%; /* Crea un margen externo a la izquierda entre el elemento que crea el margen y el que está a su izquierda */
+        margin-right: 1%; /* Crea un margen externo a la derecha entre el elemento que crea el margen y el que está a su derecha */
+    }
+    .contenedorPrincipal textarea{
+        margin-top: 80px; /* Crea un margen externo en la parte superior del elemento que crea el margen y el que está arriba */
+        height: 350px;
+    }
+    .divisionBotones button{
+        margin-top: 80px; /* Crea un margen externo en la parte superior del elemento que crea el margen y el que está arriba */
+        width: 90%; /* Establece el width del elemento al 90% */
+    }
+    .mensaje{
+        margin-top: 50px; /* Crea un margen externo en la parte superior del elemento que crea el margen y el que está arriba */
+    }
+}
+
+/* Adaptar contenido a un tamaño ancho máximo de 700px ya es la adapatación para dispositivos móviles */
+@media screen and (max-width:1050px){
+    header{
+        font-size: 30px; /* Establece el tamaño de la fuente a 30 pixeles */
+    }
+    .contenedorPrincipal {
+        display: inline-block;
+        width: 100vw; /* Asigna el width al view_width máximo */
+        height: 75vh;
+        margin-top: 0px; /* Crea un margen externo en la parte superior del elemento que crea el margen y el que está arriba */
+    }
+    .contenedorPrincipal textarea{
+        max-width: 100vw; /* Asigna al máximo widht el width al view_width */
+        max-height: 100vh; /* Asigna al máximo height el height al view_height */
+        width: 85%; /* Establece el width del elemento al 85% */
+        height: 300px;
+        margin-top: 30px; /* Crea un margen externo en la parte superior del elemento que crea el margen y el que está arriba */
+        margin-bottom: 30px;/* Crea un margen externo en la parte inferior del elemento que crea el margen y el que está debajo */
+    } 
+    .divisionBotones button{
+
+        grid-gap: 10px; /* Espacio entre las secciones */
+        margin-top: 4%; /* Crea un margen externo en la parte superior del elemento que crea el margen y el que está arriba */
+        margin-left: 2%; /* Crea un margen externo a la izquierda entre el elemento que crea el margen y el que está a su izquierda */
+        margin-right: 2%; /* Crea un margen externo a la derecha entre el elemento que crea el margen y el que está a su derecha */
+        width: 60%; /* Establece el width del elemento al 60% */
+    }
+    .mensaje{
+        margin-top: 20px; /* Crea un margen externo en la parte superior del elemento que crea el margen y el que está arriba */
+        margin-bottom: 5px; /* Crea un margen externo en la parte inferior del elemento que crea el margen y el que está debajo */
+    }
+}
